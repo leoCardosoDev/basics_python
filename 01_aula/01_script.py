@@ -1,0 +1,6 @@
+nome = input('Qual é o seu nome? ')
+print(nome)
+idade = input('Quantos anos você tem? ')
+print(idade)
+peso = input('Qual o peso que você vai chegar? ')
+print(peso)
