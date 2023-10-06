@@ -1,4 +1,5 @@
 import random
-alunos = random.sample(['João', 'Guilherme', 'Maria', 'Bernadete'], 4)
+lista = ['João', 'Guilherme', 'Maria', 'Bernadete']
+random.shuffle(lista)
 
-print(alunos)
+print(lista)
