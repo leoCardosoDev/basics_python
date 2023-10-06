@@ -1,5 +1,4 @@
-dia = input('Dia = ')
-mes = input('Mês = ')
-ano = input('Ano = ')
-
-print(f'09Você nasceu no dia {dia} de {mes} de {ano}. Correto')
+n1 = int(input('Digite um numero: '))
+n2 = int(input('Digite outro número: '))
+soma = n1 + n2
+print('A soma de {} + {} = {}'.format(n1, n2, soma))
