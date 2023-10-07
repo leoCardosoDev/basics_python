@@ -1,8 +1,8 @@
 nome = str(input('Digite o seu nome completo: '))
-nomes = nome.split()
-lastname = nome.split()
-inverter = nomes.reverse()
+lastNome = nome.split()
+firstName = nome.split()
+inverter = lastNome.reverse()
 
 # print(nomes[0])
-print(nomes[0])
-print(lastname[0])
+print(firstName[0])
+print(lastNome[0])
