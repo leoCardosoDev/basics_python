@@ -1,14 +1,17 @@
 dec = int(input('Digite um número inteiro: '))
-base = int(
-    input('Digite 1 para converter em binário: 2 para OCTAL e 3 para hexadecimal '))
+base = int(input('''
+Digite:
+[1] para converter em binário
+[2] para converter em OCTAL
+[3] para converter em hexadecimal
+'''))
 
 if base == 1:
-    # result = bin(dec)
-    result = format(dec, 'b')
+    result = f'{bin(dec)[2:]}'
 elif base == 2:
-    result = oct(dec)
+    result = f'{oct(dec)[2:]}'
 elif base == 3:
-    result = hex(dec)
+    result = f'{hex(dec)[2:]}'
 else:
     result = base
 print(result)
