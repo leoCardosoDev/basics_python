@@ -15,3 +15,4 @@ elif idade > 18 and idade - 18 < 3:
         idade - 18))
 else:
     print('Você é um caso perdido!')
+# melhorar a lógica
