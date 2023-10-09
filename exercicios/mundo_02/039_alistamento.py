@@ -1,18 +1,20 @@
 from datetime import date
-ano = int(input('Qual ano voce nasceu? '))
+ano = int(input('Qual ano você nasceu? '))
+sexo = str(input('''Qual o seu gênero:
+[M] - Masculino
+[F] - Feminino
+[O] - Outros
+''')).upper().strip()
 idade = date.today().year - ano
+if sexo == 'F' or sexo == 'O':
+    print('O alistamento não é obrigatório para você! TCHAU!')
+    exit()
 
-
-if idade < 18 and 18 - idade != 1:
-    print('Presta atenção faltam {} anos para você se alistar!'.format(
-        18 - idade))
-elif idade < 18 and 18 - idade == 1:
-    print('ATENÇÃO! Ano que vem você precisa se apresentar!')
-elif idade == 18:
-    print('ACORDA! Esse ano você precisa se apresentar!')
-elif idade > 18 and idade - 18 < 3:
-    print('PASSOU DA HORA RAPAZ! Está {} anos atrasado para você se apresentar'.format(
-        idade - 18))
+if idade == 18:
+    print('Você precisa se alistar IMEDIATAMENTE!')
+elif idade < 18:
+    print('Você tem {} ano(s)! Ainda faltam {} anos para você se alistar!'.format(idade, 18 - idade))
+elif idade > 18:
+    print('Você tem {} anos! O seu tempo de alistamento já passou em {} anos!'.format(idade, idade - 18))
 else:
-    print('Você é um caso perdido!')
-# melhorar a lógica
+    exit()
