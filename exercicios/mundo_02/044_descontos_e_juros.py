@@ -9,15 +9,16 @@ if pagamento == 4:
   parcelas = int(input('Quantas parcelas? '))
 
 if pagamento == 1:
-  precoFinal = preco - preco * 10 / 100
-  print('Você recebeu 10% de desconto pelo pagamento em {}! Então o seu produto de R$ {:.2f} ficará por R${:.2f}'.format(pagamento, preco, precoFinal))
+  total = preco - preco * 10 / 100
 elif pagamento == 2:
-  precoFinal = preco - preco * 5 / 100
-  print('Você recebeu 5% de desconto pelo pagamento no {}! Então o seu produto de R$ {:.2f} ficará por R$ {:.2f}'.format(pagamento, preco, precoFinal))
-elif pagamento == 3:
-  print('Você não recebeu desconto pelo parcelamento {} no cartão! Então o seu produto de R$ {:.2f} ficará por R$ {:.2f}'.format(pagamento, preco, preco))
-else:
-  precoFinal = preco + preco * 20 / 100
-  parcela = precoFinal / parcelas
+  total = preco - preco * 5 / 100
+elif pagamento == 4:
+  total = preco + preco * 20 / 100
+  parcela = total / parcelas
   print(f'Sua compra será parcelada em {parcelas}x de R$ {parcela:.2f} COM JUROS')
-  print('Sua compra de R$ {:.2f} vai custar R$ {:.2f}'.format(preco, precoFinal))
+elif pagamento == 3:
+  total = preco
+  print(f'Sua compra será parcelada em 2x de R$ {preco / 2 :.2f} SEM JUROS')
+else:
+  total = 0
+print('Sua compra de R$ {:.2f} vai custar R$ {:.2f}'.format(preco, total))
