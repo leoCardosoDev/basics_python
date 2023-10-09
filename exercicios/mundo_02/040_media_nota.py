@@ -7,5 +7,4 @@ if media < 5.0:
 elif media >= 5.0 and media <= 6.9:
     print('Sua média foi de: {:.1f}. Você está de recuperação!'.format(media))
 else:
-    print(
-        'Sua média foi de: {:.1f}. Parabéns! Você foi aprovado!'.format(media))
+    print('Sua média foi de: {:.1f}. Parabéns! Você foi aprovado!'.format(media))
