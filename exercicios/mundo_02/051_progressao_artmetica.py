@@ -16,3 +16,4 @@ for n in range(1, 10+1):
         print(f'a{n} = {a1} + {i} x {d} = {a1 + i * d }')
         i += 1
 print('='*15 + 'FIM ' + '='*15)
+# Errou ao ler o iniciado
