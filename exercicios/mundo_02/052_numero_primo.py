@@ -10,3 +10,5 @@ if n > 1:
             print(f'{n} não é um número primo')
 else:
     print(f'{n} não é um número primo')
+
+# Errado
