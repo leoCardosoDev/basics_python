@@ -21,4 +21,8 @@ while operacao != 5:
     elif operacao == 4:
         num1 = int(input('Digite novo 1º número: '))
         num2 = int(input('Digite novo 2º número: '))
+    elif operacao == 5:
+        print('Finalizando...')
+    else:
+        print('Opção invalida! Tente seguir o menu para continuar ou parar')
 print('FIM')
