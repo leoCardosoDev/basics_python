@@ -1,0 +1,9 @@
+n = int(input('Quantos termos você quer mostrar? '))
+a = 0
+b = 1
+while n != 0:
+    print(f'{a} -> ', end='')
+    c = a + b
+    a = b
+    b = c
+    n -= 1
