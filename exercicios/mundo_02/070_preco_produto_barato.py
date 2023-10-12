@@ -25,5 +25,4 @@ while True:
 
 print(f'O total da compra foi R$ {totalDaCompra:.2f}')
 print(f'Temos {maisDeMil} produtos custando mais de R$ 1000.00')
-print(
-    f'O produto mais barato foi {nomeprodutoBarato} que custa R$ {maisBarato:.2f}')
+print(f'O produto mais barato foi {nomeprodutoBarato} que custa R$ {maisBarato:.2f}')
