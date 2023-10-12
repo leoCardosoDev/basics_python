@@ -10,7 +10,9 @@ while True:
     produtoNome = str(input('Qual o nome do produto? '))
     preco = float(input('Preço R$: '))
     totalDaCompra += preco
-    continuar = str(input('Quer continuar? [S/N]: '))
+    continuar = ' '
+    while continuar not in 'SN':
+      continuar = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
 
     if (preco > 1000):
         maisDeMil += 1
