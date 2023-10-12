@@ -12,18 +12,14 @@ while True:
     totalDaCompra += preco
     continuar = ' '
     while continuar not in 'SN':
-      continuar = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
+        continuar = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
 
     if (preco > 1000):
         maisDeMil += 1
 
-    if maisBarato == 0:
+    if maisBarato == 0 or preco < maisBarato:
         maisBarato = preco
         nomeprodutoBarato = produtoNome
-    else:
-        if preco < maisBarato:
-            maisBarato = preco
-            nomeprodutoBarato = produtoNome
 
 print(f'O total da compra foi R$ {totalDaCompra:.2f}')
 print(f'Temos {maisDeMil} produtos custando mais de R$ 1000.00')
