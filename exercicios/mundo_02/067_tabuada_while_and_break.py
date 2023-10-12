@@ -4,6 +4,6 @@ while True:
     if n < 0:
         break
     while multiplicador <= 10:
-        print(f'{n:>2} x {multiplicador:>2} = {n * multiplicador}')
+        print(f'{n:>2} x {multiplicador:>2} = {n * multiplicador:>2}')
         multiplicador += 1
     multiplicador = 0
