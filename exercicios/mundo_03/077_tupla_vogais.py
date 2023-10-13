@@ -26,3 +26,14 @@ for palavra in palavras:
         print('nenhuma')
     else:
         print()
+print('-'*40)
+print('\n')
+print(f'{"Forma corrigida: ":^40}')
+print('\n')
+print('-'*40)
+
+for p in palavras:
+    print(f'\nNa palavra {p.upper()} temos ', end='')
+    for vogal in p:
+        if vogal.lower() in 'aeiou':
+            print(vogal, end='')
