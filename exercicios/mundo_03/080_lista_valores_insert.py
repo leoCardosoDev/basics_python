@@ -1,10 +1,7 @@
 valores = []
 for i in range(0, 5):
     num = int(input('Digite um valor: '))
-    if i == 0:
-        valores.append(num)
-        print('Adicionado ao final da lista')
-    elif num >= max(valores):
+    if i == 0 or num >= max(valores):
         valores.append(num)
         print('Adicionado ao final da lista')
     elif num <= min(valores):
@@ -21,3 +18,4 @@ for i in range(0, 5):
         print(f'Valor adicionado na posição 2 da lista')
 
 print(f'Os valores digitados em ordem foram: {valores}')
+# melhora a lógica com while
