@@ -1,8 +1,4 @@
-a = (int(input('Digite um número: ')),)
-b = (int(input('Digite outro número: ')),)
-c = (int(input('Digite mais um número: ')),)
-d = (int(input('Digite o último número: ')),)
-valores = a+b+c+d
+valores = (int(input('Digite um número: ')), int(input('Digite outro número: ')), int(input('Digite mais um número: ')), int(input('Digite o último número: ')),)
 
 cont = 0
 for par in range(0, len(valores)):
