@@ -1,5 +1,5 @@
 times = 'Botafogo', 'Bragantino', 'Grêmio', 'Palmeiras', 'Flamengo', 'Fortaleza', 'Fluminense', 'Athletico-PR', 'Atlético-MG', 'São Paulo', 'Cuiabá', 'Internacional', 'Corinthians', 'Santos', 'Cruzeiro', 'Bahia', 'Vasco', 'Goiás', 'Coritiba', 'América-MG'
-print('-=' * 40)
+
 print('Lista dos times do Brasileirão: ', end='')
 print(times)
 
@@ -16,4 +16,4 @@ print('Times em ordem alfabetica: ', end='')
 print(sorted(times))
 
 print('-=' * 40)
-print(f'O time {times[8]} está na 8º posição: ')
+print(f'O time {times[9]} está na {times.index("São Paulo")+1}º posição: ')
