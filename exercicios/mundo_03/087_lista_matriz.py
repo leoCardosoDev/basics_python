@@ -1,47 +1,20 @@
-matriz = []
-linha = 0
-coluna = 0
-
-matrizLinha1 = []
-matrizLinha2 = []
-matrizLinha3 = []
-
-for i in range(0, 9):
-    if coluna > 2:
-        linha += 1
-        coluna = 0
-    valor = int(input(f'Digite um valor para [{linha}, {coluna}]: '))
-
-    if i <= 2:
-        matrizLinha1.append(valor)
-        coluna += 1
-    elif i >= 3 and i <= 5:
-        coluna += 1
-        matrizLinha2.append(valor)
-    elif i >= 6:
-        coluna += 1
-        matrizLinha3.append(valor)
-
-matriz.insert(0, matrizLinha1)
-matriz.insert(1, matrizLinha2)
-matriz.insert(3, matrizLinha3)
-
-pares = 0
-soma3Coluna = matriz[0][2] + matriz[1][2] + matriz[2][2]
-maioValorColuna2 = max(matriz[1])
-print()
-print(f'_-'*35)
-
-for linha in matriz:
+matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+par = 0
+somaColuna = 0
+maiorValor = 0
+for linha in range(0, 3):
+    for coluna in range(0, 3):
+        matriz[linha][coluna] = int(
+            input(f'Digite um valor para [{linha}, {coluna}]:'))
+print('-_' * 30)
+for linha in range(0, 3):
+    somaColuna += matriz[linha][2]
+    maiorValor = max(matriz[1])
+    for coluna in range(0, 3):
+        print(f'[{matriz[linha][coluna]:^5}]', end='')
+        if matriz[linha][coluna] % 2 == 0:
+            par += matriz[linha][coluna]
     print()
-    for item in linha:
-        if item % 2 == 0:
-            pares += item
-        print(f'[   {item}   ]', end='')
-    print()
-print()
-print(f'_-'*35)
-print()
-print(f'A soma dos valores pares é {pares}')
-print(f'A soma dos valores da terceira coluna é {soma3Coluna}')
-print(f'O maior valor da segunda linha é {maioValorColuna2}')
+print(f'A soma dos valores pares é {par}')
+print(f'A soma dos valores da 3ª coluna é {somaColuna}')
+print(f'O maior valor da 2ª linha é {maiorValor}')
