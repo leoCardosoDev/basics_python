@@ -27,7 +27,7 @@ print(f'_-'*35)
 for linha in matriz:
     print()
     for item in linha:
-        print(f'[   {item}   ]', end='')
+        print(f'[{item:^5}]', end='')
     print()
 print()
 print(f'_-'*35)
