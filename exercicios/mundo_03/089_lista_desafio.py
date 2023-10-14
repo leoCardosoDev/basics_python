@@ -1,24 +1,23 @@
-alunos = []
-notas = []
-media = []
-aluno = []
-
+alunos = list()
 while True:
-    nome = str(input('Nome: '))
+    nome = input('Nome: ')
     nota1 = float(input('Nota 1: '))
     nota2 = float(input('Nota 2: '))
-    notas = [nota1, nota2]
-    media = [(nota1 + nota2) / 2]
-    aluno = [nome, notas, media]
-    alunos.append(aluno)
-    continuar = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
+    media = (nota1 + nota2) / 2
+    alunos.append([nome, [nota1, nota2], media])
+    continuar = input('Quer continuar? [S/N]: ').strip().upper()[0]
     if continuar != 'S':
-        print(f'Noº  NOME         MEDIA  ')
+        print(f'{"Noº":<4}{"NOME":<10}{"MEDIA":>8}')
         for pos, linha in enumerate(alunos):
-            print(f'{pos:} -  {linha[0]} -   {linha[2]}')
+            print(f'{pos:<4}{linha[0]:<10}{linha[2]:>8.1f}')
         while True:
-            selecionado = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
-            print(f'Notas de {alunos[selecionado][0]} são: {alunos[selecionado][1]}')
+            selecionado = int(
+                input('Mostrar notas de qual aluno? (999 interrompe): '))
             if selecionado == 999:
                 break
+            if 0 <= selecionado < len(alunos):
+                print(
+                    f'Notas de {alunos[selecionado][0]} são: {alunos[selecionado][1]}')
+            else:
+                print('Número de aluno inválido. Tente novamente.')
         break
