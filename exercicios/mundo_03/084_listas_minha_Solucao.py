@@ -1,17 +1,15 @@
 pessoas = []
-total = 0
 
 while True:
   nome = str(input('Nome: ')).strip()
   peso = int(input('Peso: '))
   pessoa = [nome, peso]
   pessoas.append(pessoa)
-  total += 1
   continuar = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
   if continuar != 'S':
     break
 
-print(f'Você cadastrou {total} de pessoas\n')
+print(f'Você cadastrou {len(pessoas)} de pessoas\n')
 if pessoas:
   pessoa_maior_peso = max(pessoas, key=lambda x: x[1])
   pessoa_menor_peso = min(pessoas, key=lambda x: x[1])
