@@ -1,7 +1,8 @@
 def escreva(txt: str):
-    print('~'*len(txt))
-    print(f'{txt.upper():^4}')
-    print('~'*len(txt))
+    tamanho = len(txt) + 4
+    print('~' * tamanho)
+    print(f'  {txt.upper()}')
+    print('~' * tamanho)
 
 
 escreva('Leo Silva')
