@@ -1,8 +1,7 @@
 from datetime import date
 trabalhador = {}
 
-nome = str(input('Nome: '))
-trabalhador['nome'] = nome
+trabalhador['nome'] = str(input('Nome: '))
 data_nasc = int(input('Ano de nascimento: '))
 idade = date.today().year - data_nasc
 trabalhador['idade'] = date.today().year - data_nasc
@@ -15,7 +14,4 @@ if carteira_trabalho != 0:
 
 
 for key, value in trabalhador.items():
-  if key not in 'doc':
-    print(f'O {key} tem o valor {value}')
-  else:
-    print(f'O {key} tem o valor {value}')
+  print(f'O {key} tem o valor {value}')
