@@ -5,6 +5,8 @@ from operator import neg, abs
 def contador(inicio, fim, passo):
     passoString = str(passo).replace("-", "")
     print(f'Contagem de {inicio} até {fim} de {passoString} em {passoString}')
+    if passo == 0:
+        passo = 1
     if fim > inicio:
         fim += 1
     else:
@@ -15,6 +17,7 @@ def contador(inicio, fim, passo):
             passo -= 1
     if fim == 0:
         fim -= fim
+    
     for index in range(inicio, fim, passo):
         print(f'{index} ', end='', flush=True)
         sleep(.5)
