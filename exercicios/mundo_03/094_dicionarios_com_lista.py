@@ -2,12 +2,9 @@ pessoas = []
 pessoa = {}
 
 while True:
-    nome = str(input('Nome: '))
-    sexo = str(input('Sexo [M/F]: ')).strip().upper()
-    idade = int(input('Idade: '))
-    pessoa['nome'] = nome
-    pessoa['sexo'] = sexo
-    pessoa['idade'] = idade
+    pessoa['nome'] = str(input('Nome: '))
+    pessoa['sexo'] = str(input('Sexo [M/F]: ')).strip().upper()
+    pessoa['idade'] = int(input('Idade: '))
     continuar = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
     pessoas.append(pessoa.copy())
     if continuar not in 'S':
