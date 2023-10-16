@@ -16,8 +16,8 @@ def contador(i, f, p):
     if f == 0:
         f -= f
     for index in range(i, f, p):
-        print(f'{index} ', end='')
-    sleep(.5)
+        print(f'{index} ', end='', flush=True)
+        sleep(.5)
     print()
 
 
