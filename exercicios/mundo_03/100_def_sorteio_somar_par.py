@@ -6,7 +6,7 @@ numeros_sorteados = []
 def sorteio():
   print(f'Sorteando 5 valores da lista: ', end='', flush=True)
   for i in range(0, 5):
-    numeros_sorteados.insert(i, randint(1, 9))
+    numeros_sorteados.insert(i, randint(1, 10))
     print(f'{numeros_sorteados[i]} ', end='', flush=True)
     sleep(.5)
   print('PRONTO!')
