@@ -11,7 +11,7 @@ while True:
         total += gol
         gols.insert(i, gol)
     stats['nome'] = nome
-    stats['gols'] = gols
+    stats['gols'] = gols[:]
     stats['total'] = total
     jogadores.append(stats.copy())
     continuar = str(input('Quer continuar? [S/N] ')).strip().upper()[0]

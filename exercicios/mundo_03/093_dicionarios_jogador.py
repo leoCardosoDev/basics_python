@@ -10,7 +10,7 @@ for i in range(0, partidas):
   gols.append(gol)
 
 stats['nome'] = jogador
-stats['gols'] = gols
+stats['gols'] = gols[:]
 stats['total'] = total
 
 for key, values in stats.items():
