@@ -15,6 +15,7 @@ while True:
     stats['total'] = total
     jogadores.append(stats.copy())
     continuar = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
+    gols.clear()
     if continuar not in 'S':
         print(f'{"Cod:":<4} {"Nome:":<10} {"gols":<5} {"total":>10}')
         for pos, value in enumerate(jogadores):
