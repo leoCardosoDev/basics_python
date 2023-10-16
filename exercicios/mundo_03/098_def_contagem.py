@@ -2,20 +2,20 @@ from time import sleep
 from operator import neg, abs
 
 
-def contador(i, f, p):
-    ps = str(p).replace("-", "")
-    print(f'Contagem de {i} até {f} de {ps} em {ps}')
-    if f > i:
-        f += 1
+def contador(inicio, fim, passo):
+    passoString = str(passo).replace("-", "")
+    print(f'Contagem de {inicio} até {fim} de {passoString} em {passoString}')
+    if fim > inicio:
+        fim += 1
     else:
-        f -= 1
-        if p > 0:
-            p = neg(p)
-        elif f < 0:
-            p -= 1
-    if f == 0:
-        f -= f
-    for index in range(i, f, p):
+        fim -= 1
+        if passo > 0:
+            passo = neg(passo)
+        elif fim < 0:
+            passo -= 1
+    if fim == 0:
+        fim -= fim
+    for index in range(inicio, fim, passo):
         print(f'{index} ', end='', flush=True)
         sleep(.5)
     print()
