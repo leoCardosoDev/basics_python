@@ -1,49 +1,33 @@
-def aumentar(numero, porcem, formatado=False):
-    if formatado:
-        return moedaF(numero + (porcem / 100) * numero)
-    else:
-        return numero + (porcem / 100) * numero
+def aumentar(preco, porcem, formatado=False):
+    resposta = preco + (porcem / 100) * preco
+    return resposta if formatado is False else moeda(preco + (porcem / 100) * preco)
 
 
-def diminuir(numero, porcem, formatado=False):
-    if formatado:
-        return moedaF(numero - (porcem / 100) * numero)
-    else:
-        return numero - (porcem / 100) * numero
+def diminuir(preco, porcem, formatado=False):
+    resposta = preco - (porcem / 100) * preco
+    return resposta if formatado is False else moeda(preco - (porcem / 100) * preco)
 
 
-def metade(numero, formatado=False):
-    if formatado:
-        return moedaF(numero / 2)
-    else:
-        return numero / 2
+def metade(preco, formatado=False):
+    resposta = preco / 2
+    return resposta if formatado is False else moeda(preco / 2)
 
 
-def dobro(numero, formatado=False):
-    if formatado:
-        return moedaF(numero * 2)
-    else:
-        return numero * 2
+def dobro(preco, formatado=False):
+    resposta = preco * 2
+    return resposta if formatado is False else moeda(preco * 2)
 
 
-def moedaF(numero: float):
-    return f'R$ {numero:.2f}'
+def moeda(preco: float, moeda="R$"):
+    return f'{moeda} {preco:8.2f}'.replace('.', ',')
 
 
 def resumo(preco, aumento, reducao):
     print('-'*30)
-    print(f'    RESUMO DO VALOR   ')
+    print(f'RESUMO DO VALOR'.center(30))
     print('-'*30)
-
-    print(f'{"Preço analizado: ":<4}', end='')
-    print(f'{moedaF(preco):>15}', end='')
-    print()
-    print(f'{"Dobro do preço: ":<4}', end='')
-    print(f'{dobro(preco, True):>15}', end='')
-    print()
-    print(f'{aumento}{"% de aumento: ":<4}', end='')
-    print(f'{aumentar(preco, aumento, True):>15}', end='')
-    print()
-    print(f'{reducao}{"% de redução: ":<4}', end='')
-    print(f'{diminuir(preco, reducao, True):>15}', end='')
-    print()
+    print(f'Preço analizado: \t{moeda(preco)}')
+    print('-'*30)
+    print(f'Dobro do preço: \t{dobro(preco, True)}')
+    print(f'{aumento}% de aumento: \t{aumentar(preco, aumento, True)}')
+    print(f'{reducao}% de redução: \t{diminuir(preco, reducao, True)}')
