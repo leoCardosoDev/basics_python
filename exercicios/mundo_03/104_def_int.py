@@ -1,9 +1,11 @@
 def leiaInt(numero):
-  inteiro = int(input(numero))
-  while inteiro not in int:
-    print('Erro! Digite um número inteiro válido!')
-    if type(inteiro) == int:
+  inteiro = input(numero)
+  isValidInt = inteiro.isalnum() or inteiro.isalpha() or inteiro.isspace()
+  while isValidInt:
+    if inteiro.isnumeric():
       break
+    print('Erro! Digite um número inteiro válido!')
+    inteiro = input(numero)  
   return inteiro
 
 
