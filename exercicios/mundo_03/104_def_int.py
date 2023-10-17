@@ -4,7 +4,7 @@ def leiaInt(numero):
   while isValidInt:
     if inteiro.isnumeric():
       break
-    print('Erro! Digite um número inteiro válido!')
+    print('\033[0;31mErro! Digite um número inteiro válido!\033[m')
     inteiro = input(numero)  
   return inteiro
 
