@@ -1,30 +1,22 @@
-def aumentar(numero, porcem, formatado=False):
-    if formatado:
-        return moeda(numero + (porcem / 100) * numero)
-    else:
-        return numero + (porcem / 100) * numero
+def aumentar(preco, porcem, formatado=False):
+    resposta = preco + (porcem / 100) * preco
+    return resposta if formatado else moeda(preco + (porcem / 100) * preco)
 
 
-def diminuir(numero, porcem, formatado=False):
-    if formatado:
-        return moeda(numero - (porcem / 100) * numero)
-    else:
-        return numero - (porcem / 100) * numero
+def diminuir(preco, porcem, formatado=False):
+    resposta = preco - (porcem / 100) * preco
+    return resposta if formatado else moeda(preco - (porcem / 100) * preco)
 
 
-def metade(numero, formatado=False):
-    if formatado:
-        return moeda(numero / 2)
-    else:
-        return numero / 2
+def metade(preco, formatado=False):
+    resposta = preco / 2
+    return resposta if formatado else moeda(preco / 2)
 
 
-def dobro(numero, formatado=False):
-    if formatado:
-        return moeda(numero * 2)
-    else:
-        return numero * 2
+def dobro(preco, formatado=False):
+    resposta = preco * 2
+    return resposta if formatado else moeda(preco * 2)
 
 
-def moeda(numero: float):
-    return f'R$ {numero:.2f}'
+def moeda(preco: float):
+    return f'{moeda} {preco:8.2f}'.replace('.', ',')
