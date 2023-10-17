@@ -1,18 +1,18 @@
-def aumentar(numero, porcem):
-    return moeda(numero + (porcem / 100) * numero)
+def aumentar(preco, porcem):
+    return moeda(preco + (porcem / 100) * preco)
 
 
-def diminuir(numero, porcem):
-    return moeda(numero - (porcem / 100) * numero)
+def diminuir(preco, porcem):
+    return moeda(preco - (porcem / 100) * preco)
 
 
-def metade(numero):
-    return moeda(numero / 2)
+def metade(preco):
+    return moeda(preco / 2)
 
 
-def dobro(numero):
-    return moeda(numero * 2)
+def dobro(preco):
+    return moeda(preco * 2)
 
 
-def moeda(numero: float):
-    return f'R$ {numero:.2f}'
+def moeda(preco: float, moeda='R$'):
+    return f'{moeda} {preco:8.2f}'.replace('.', ',')
