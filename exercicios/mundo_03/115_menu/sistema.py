@@ -13,6 +13,9 @@ while True:
         lerArquivo(arquivo)
     elif resposta == 2:
         cabecalho('Cadastrar Nova Pessoa')
+        nome = str(input('Nome: '))
+        idade = leiaInt('Idade: ')
+        cadastrar(arquivo, nome, idade)
     elif resposta == 3:
         cabecalho('Saindo do Sistema... Até logo')
         break

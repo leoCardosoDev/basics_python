@@ -1,5 +1,4 @@
-from desafio115.lib.interface import cabecalho
-
+from desafio115.lib.interface import *
 
 def arquivoExiste(nome):
     try:
@@ -26,4 +25,24 @@ def lerArquivo(nome):
         print('Erro ao ler o arquivo!')
     else:
         cabecalho('Listar Pessoas')
-        print(arquivo.read())
+        for linha in arquivo:
+            dado = linha.split(';')
+            dado[1].replace('\n', '')
+            print(f'{dado[0]}\t{dado[1]} anos')
+    finally:
+        arquivo.close()
+
+
+def cadastrar(arquivo, nome='desconhecido', idade=0):
+    try:
+        a = open(arquivo, 'at')
+    except:
+        print('Houve um erro na abertura do arquivo')
+    else:
+        try:
+            a.write(f'{nome};{idade}\n')
+        except:
+            print('Houve um erro na hora de escrever os dados!')
+        else:
+            print(f'Novo registro de {nome} adicionado.')
+            a.close()
