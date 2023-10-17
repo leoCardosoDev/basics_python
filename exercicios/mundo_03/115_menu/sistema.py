@@ -1,11 +1,16 @@
 from desafio115.lib.interface import *
+from desafio115.lib.arquivo import *
 from time import sleep
 
+arquivo = 'cursoemvideo.txt'
+
+if not arquivoExiste(arquivo):
+    criarArquivo(arquivo)
+
 while True:
-    resposta = menu(
-        ['Listar Pessoas', 'Cadastrar Nova Pessoa', 'Sair do Sistema'])
+    resposta = menu(['Listar Pessoas', 'Cadastrar Nova Pessoa', 'Sair do Sistema'])
     if resposta == 1:
-        cabecalho('Listar Pessoas')
+        lerArquivo(arquivo)
     elif resposta == 2:
         cabecalho('Cadastrar Nova Pessoa')
     elif resposta == 3:
