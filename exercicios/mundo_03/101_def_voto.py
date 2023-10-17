@@ -1,7 +1,5 @@
-from datetime import datetime
-
-
 def voto(ano):
+    from datetime import datetime
     idade = datetime.now().year - ano
     if idade > 15 and idade <= 17 or idade > 65:
         print(f'Com {idade} anos: Seu VOTO É OPCIONAL')
